@@ -1,0 +1,85 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-name: animation-bg;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    .b_icon{
+        animation-name: shake-icon;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    :nth-child(1).b_icon{
+        width: 40px;
+        position: relative;
+        top: 300px;
+        right: 50px;
+    }
+    :nth-child(2).b_icon{
+        width: 40px;
+        position: relative;
+        left: 250px;
+        top: 50px;
+    }
+    .auguriContainer{
+        padding: 50px;
+    }
+    .auguri{
+        width: min-content;
+        padding: 10px;
+        border-radius: 20px;
+        border: 10px double red;
+        background-color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .text{
+            text-align: center;
+            font-size: 60px;
+            
+        }
+        .numImgContainer{
+            width: 50%;
+            .numImg{
+                width: 50%;
+                height: auto;
+                //max-width: 50px;
+            }
+        }
+    }
+}
+
+
+@keyframes animation-bg {
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: orange;
+    }
+    50%{
+        background-color: yellow;
+    }
+    75%{
+        background-color: rgb(47, 255, 99);
+    }
+    100%{
+        background-color: blue;
+    }
+}
+
+@keyframes shake-icon{
+    from{
+        transform: rotate(5deg);
+    }
+    to{
+        transform: rotate(-15deg);
+    }
+}
